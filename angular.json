@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "SagarMarbles"
+    }
+  },
+  "defaultProject": "SagarMarbles",
+  "cli": {
+    "analytics": false
+  }
 }
