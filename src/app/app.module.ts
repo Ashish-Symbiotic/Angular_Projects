@@ -22,6 +22,9 @@ import { CasesStatComponent } from './cases-stat/cases-stat.component';
     BrowserModule,
     AppRoutingModule
   ],
+
+
+  
   providers: [],
   bootstrap: [AppComponent]
 })
