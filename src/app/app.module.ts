@@ -8,6 +8,7 @@ import { CaseDetailsComponent } from './case-details/case-details.component';
 import { AddCasesComponent } from './add-cases/add-cases.component';
 import { EditCasesComponent } from './edit-cases/edit-cases.component';
 import { CasesStatComponent } from './cases-stat/cases-stat.component';
+import { RedColorDirective } from './red-color.directive';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CasesStatComponent } from './cases-stat/cases-stat.component';
     CaseDetailsComponent,
     AddCasesComponent,
     EditCasesComponent,
-    CasesStatComponent
+    CasesStatComponent,
+    RedColorDirective
   ],
   imports: [
     BrowserModule,

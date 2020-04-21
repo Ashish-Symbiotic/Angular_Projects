@@ -1,1 +1,9 @@
 <p>cases works!</p>
+<h1>{{name}}</h1>
+<ul>
+    <li>Age : {{age}}</li>
+    <li>{{address.street}} {{address.state}}</li>
+    <li *ngFor="let hobbie of hobbies; let i = index">{{i+1}}:{{hobbie}}</li>
+
+</ul>
+

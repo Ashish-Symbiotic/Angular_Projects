@@ -32,10 +32,6 @@ const routes: Routes = [
     path: 'edit-cases/:id',
     component: EditCasesComponent,
     data: { title: 'Edit Cases' }
-  },
-  { path: '',
-    redirectTo: '/cases',
-    pathMatch: 'full'
   }
 ];
 
