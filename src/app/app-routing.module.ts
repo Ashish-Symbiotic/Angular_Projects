@@ -5,16 +5,21 @@ import { CaseDetailsComponent } from './case-details/case-details.component';
 import { CasesStatComponent } from './cases-stat/cases-stat.component';
 import { AddCasesComponent } from './add-cases/add-cases.component';
 import { EditCasesComponent } from './edit-cases/edit-cases.component';
+import { AppComponent } from './app.component';
 
 
 const routes: Routes = [
+  {
+    path:"",
+component:AppComponent
+  },
   {
     path: 'cases',
     component: CasesComponent,
     data: { title: 'List of Cases' }
   },
   {
-    path: 'cases-details/:id',
+    path: 'cases-details',
     component: CaseDetailsComponent,
     data: { title: 'Cases Details' }
   },
@@ -36,7 +41,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+imports: [RouterModule.forRoot(routes,{enableTracing:true})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
