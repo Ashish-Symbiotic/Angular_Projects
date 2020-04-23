@@ -1,9 +1,38 @@
-<p>cases works!</p>
+<p appRedColor>cases works!</p>
+<button (click)="ClickFunc()">Click Me</button>
+
+
+
 <h1>{{name}}</h1>
 <ul>
-    <li>Age : {{age}}</li>
+    <li appRedColor>Age : {{age}}</li>
     <li>{{address.street}} {{address.state}}</li>
-    <li *ngFor="let hobbie of hobbies; let i = index">{{i+1}}:{{hobbie}}</li>
+    <li *ngFor="let hobbie of hobbies; let i = index">{{i+1}}:{{hobbie}}
+      <button (click)="DeleteHobbies(hobbie)" >x</button>
+    </li>
 
 </ul>
 
+
+<form (submit)="addHobby(hobby.value)">
+  <div>
+    <label for ="hobby">Hobby</label>
+    <input type="text" #hobby>
+
+  </div>
+</form>
+
+<div>
+  <form>
+    <label for ="name">Name</label>
+    <input type="text" name="name"[(ngModel)]="name"><br>
+    <label for ="Age">Age</label>
+    <input type="text" name="Age" [(ngModel)]="age"><br>
+    <label for ="Street">Street</label>
+
+    <input type="text" name="Street" [(ngModel)]="address.street">
+  </form>
+</div>
+
+
+<h1 *ngIf = "visible">This is not Possible </h1>

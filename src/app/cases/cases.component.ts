@@ -8,11 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class CasesComponent implements OnInit {
 name:string="Radhey Shyam";
 age:number;
-address:{
-  street:string,
-  city:string,
-  state:string
-};
+visible=true ;
+address:Address;
 hobbies:string[];
   constructor() {
     console.log("Jai Mata Di");
@@ -27,8 +24,39 @@ hobbies:string[];
       city:"Delhi",
     state:"Ed"
     }
-    this.hobbies=['THis is my hobbies', 'This is not my hobbies']; 
+    this.hobbies=['THis is my hobbies', 'This is not my hobbies'];
   }
-  
+ClickFunc(){
+  console.log("This name is changed");
+  alert("Hello Button is Clicked");
+  this.name="Jai Mata Di";
+  this.visible=!this.visible;
 
+  this.hobbies.push("gamming");
+}
+addHobby(hobby:string)
+{
+  this.hobbies.unshift(hobby);
+
+  return false;
+
+}
+DeleteHobbies(er:any)
+{
+    for(let i=0;i<this.hobbies.length;i++)
+    {
+      if(this.hobbies[i] ==  er)
+      {
+        this.hobbies.splice(i,1);
+      }
+    }
+}
+
+
+}
+interface Address
+{
+  street:string,
+  city:string,
+  state:string
 }
