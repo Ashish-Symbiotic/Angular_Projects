@@ -1,1 +1,8 @@
-<p>cases-stat works!</p>
+<p (click)="getdata()">cases-stat works!</p>
+
+<ul *ngFor="let d of data" >
+  <li  >{{d.title}}</li>
+</ul>
+
+<input type="text" #name1>
+<button (click)="callme(name1)">Click on me </button>

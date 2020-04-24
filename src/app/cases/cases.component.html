@@ -13,7 +13,7 @@
 
 </ul>
 
-<a [title]="name + ' details'" [routerLink]="['/cases']">Hello
+<a [title]="name + ' details'" [routerLink]="['/cases-details']">Hello
 </a><br>
 <form (submit)="addHobby(hobby.value)">
   <div>
@@ -34,6 +34,6 @@
     <input type="text" name="Street" [(ngModel)]="address.street">
   </form>
 </div>
-
+<a routerLink="/cases-stat">Home</a>
 
 <h1 *ngIf = "visible">This is not Possible </h1>

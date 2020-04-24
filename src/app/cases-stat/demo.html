@@ -1,0 +1,21 @@
+<html>
+<head>
+  <title>This is a Demo of js </title>
+</head>
+<body>
+<form onsubmit="return false">
+  <input type="text" name ="name" id="name2">
+  <input type ="text" name ="value" id ="name1">
+  <button onclick=callme(name2.value,name1.value)>Click Me</button>
+</form>
+</body>
+<script>
+  function callme( x ,  y)
+  {
+    x= parseInt(x);
+    y= parseInt(y);
+    console.log(x+y);
+    return true;
+  }
+</script>
+</html>
