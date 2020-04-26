@@ -1,0 +1,135 @@
+<div class="main">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" routerLink="#"><FONT SIZE="10" FACE="CALIBRI">Rentistan</FONT></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/profile"><FONT SIZE="5" FACE="CALIBRI">&nbsp;&nbsp;&nbsp;Post</FONT><span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/rent"><FONT SIZE="5" FACE="CALIBRI">&nbsp;&nbsp;Rent</FONT></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href=""><FONT SIZE="5" FACE="CALIBRI">&nbsp;&nbsp;Enquiry</FONT></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><FONT SIZE="5" FACE="CALIBRI">&nbsp;&nbsp;About</FONT></a>
+      </li>
+
+      <li class="nav-item dropdown show">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true"><FONT SIZE="5" FACE="CALIBRI">&nbsp;&nbsp;Login</FONT></a>
+    <div class="dropdown-menu hide" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 38px, 0px);">
+      <a class="dropdown-item" routerLink="/Login"><FONT SIZE="5" FACE="CALIBRI">Customer Login</FONT></a>
+      <a class="dropdown-item" href="#"><FONT SIZE="5" FACE="CALIBRI">Property Dealer Login</FONT></a>  
+    </div>
+  </li>
+
+  <li class="nav-item">
+        <a class="nav-link" href="/own"><FONT SIZE="5" FACE="CALIBRI">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New User</FONT></a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+
+
+
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+    <li data-target="#demo" data-slide-to="3"></li>
+    <li data-target="#demo" data-slide-to="4"></li>
+  </ul>
+  
+
+<div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="../../assets/images/1.jpg" alt="Los Angeles" width="100%" height="500">
+    </div>
+    <div class="carousel-item">
+      <img src="../../assets/images/2.jpg" alt="Chicago" width="100%" height="500">
+    </div>
+    <div class="carousel-item">
+      <img src="../../assets/images/3.jpg" alt="New York" width="100%" height="500">
+    </div>
+     <div class="carousel-item">
+      <img src="../../assets/images/4.jpg" alt="Rohini" width="100%" height="500">
+    </div>
+     <div class="carousel-item">
+      <img src="../../assets/images/5.jpg" alt="GB Road" width="100%" height="500">
+    </div>
+  </div>
+  
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+
+<div class="propertyinfo">
+  <FONT SIZE="5" FACE="CALIBRI">OwnerName:</FONT><br>
+  <FONT SIZE="5" FACE="CALIBRI">Phone No:</FONT><br>
+  <FONT SIZE="5" FACE="CALIBRI">Address:</FONT><br>
+  <FONT SIZE="5" FACE="CALIBRI">Aadhar Card Number:</FONT><br>
+  <FONT SIZE="5" FACE="CALIBRI">Property Address:</FONT><br>
+  <FONT SIZE="5" FACE="CALIBRI">Locality:</FONT><br>
+  <FONT SIZE="5" FACE="CALIBRI">Type:</FONT><br>
+  <FONT SIZE="5" FACE="CALIBRI">BHK:</FONT><br>
+  <FONT SIZE="5" FACE="CALIBRI">Area:</FONT><br>
+  <FONT SIZE="5" FACE="CALIBRI">Floor:</FONT><br>
+  <FONT SIZE="5" FACE="CALIBRI">Rooms:</FONT><br>
+  <FONT SIZE="5" FACE="CALIBRI">Kitchen:</FONT><br>
+  <FONT SIZE="5" FACE="CALIBRI">Bathroom:</FONT><br>
+  <FONT SIZE="5" FACE="CALIBRI">Price:</FONT><br>
+  <FONT SIZE="5" FACE="CALIBRI">Parking:</FONT><br>
+</div>
+ <form #f="ngForm" (ngSubmit)="submit(f)">
+		<!-- Trigger the modal with a button -->
+<button type="button"  id ="button1" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Rent</button>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+     
+      <div class="modal-body">
+     	<b>I hereby declare that all the verification and documentation for this property has been done form my side. I will like to pay the requisite amount for the property through this website. </b><br>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" [disabled]="!f.valid">OK</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+</form>
+
+<div class="footer">
+	<p>
+		Disclaimer: Rentistan is only an intermediary offering its platform to facilitate the transactions between Seller and Customer/Buyer/User and is not and cannot be a party to or control in any manner any transactions between the Seller and the Customer/Buyer/User. All the offers and discounts on this Website have been extended by various Builder(s)/Developer(s) who have advertised their products. Rentistan is only communicating the offers and not selling or rendering any of those products or services. It neither warrants nor is it making any representations with respect to offer(s) made on the site. Rentistan shall neither be responsible nor liable to mediate or resolve any disputes or disagreements between the Customer/Buyer/User and the Seller and both Seller and Customer/Buyer/User shall settle all such disputes without involving Rnetistan in any manner.
+	</p>
+	<hr>
+  <p>All trademarks, logos and names are properties of their respective owners. All Rights Reserved. © Copyright 2018 Rentistan</p>
+  <p>Contact information: <a href="mailto:someone@example.com">
+  support@gmail.com</a>.</p>
+</div>
+
+
+</div>
+

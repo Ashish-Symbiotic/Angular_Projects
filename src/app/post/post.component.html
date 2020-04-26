@@ -1,0 +1,100 @@
+<form [formGroup]="post" #f="ngForm" (ngSubmit)="submit(f,event)">
+<div id="asg">
+<div class="form-group">
+<h2> Post Your Property Here</h2>
+<!---<label for="Regid">User Registration ID</label>
+<label for="Regid1">User Registration ID</label><br>--->
+<label for="own">Owner Name</label>
+<input type="text"
+class="form-control"
+formControlName="ownername"
+ id="ownername"
+ placeholder="Enter House Owner Name"><br>
+<div *ngIf="ownername.touched" class="alert alert-danger"  id="war1">House Owner Name is required</div>
+<label for="add">Address</label>
+<textarea  cols="10" rows="4"
+formControlName="address"
+class="form-control"
+id="address"
+placeholder="Enter your Address"></textarea><br>
+<div *ngIf="address.touched && address.invalid" class="alert alert-danger"  id="war1">
+<div *ngIf="address.errors.required">Address is required</div>
+<div *ngIf="address.errors.minlength">Address should be 5 charecters</div>
+</div>
+<label for="loc">Locality</label>
+<select  id="location" class="form-control">
+<option *ngFor="let method of location" [value]="method.id">{{ method.name }}</option>
+</select>
+<br>
+<div class="radio">
+<label>
+<input  type="radio" name="select" value="1" id="wh" >
+Whole House &nbsp; &nbsp;
+</label>
+<label>
+<input  type="radio" name="select" value="2" id="fl" >
+Floor
+</label>
+</div>
+
+<div id="wholehouse">
+  <input type="text"
+  class="form-control"
+   placeholder="Enter your area"><br>
+
+   <input type="text"
+   class="form-control"
+    placeholder="Enter Number of floors"><br>
+
+    <input type="text"
+    class="form-control"
+     placeholder="Enter Number of rooms"><br>
+
+     <label for="kit">Kitchen</label>
+     <select  id="kitchen" class="form-control">
+     <option *ngFor="let method of kitchen" [value]="method.id">{{ method.name }}</option>
+     </select>
+     <br>
+
+          <label for="bat">Bathroom</label>
+          <select  id="bathroom" class="form-control">
+          <option *ngFor="let method of bathroom" [value]="method.id">{{ method.name }}</option>
+          </select>
+
+</div>
+<br><br>
+<div id="flr">
+  <input type="text"
+  class="form-control"
+   placeholder="Enter your area"><br>
+
+   <label for="fl">Select floor to rent</label>
+   <select  id="floor" class="form-control">
+   <option *ngFor="let method of floor" [value]="method.id">{{ method.name }}</option>
+ </select><br>
+
+    <input type="text"
+    class="form-control"
+     placeholder="Enter Number of rooms"><br>
+
+     <label for="kit">Kitchen</label>
+     <select  id="kitchen" class="form-control">
+     <option *ngFor="let method of kitchen" [value]="method.id">{{ method.name }}</option>
+     </select>
+     <br>
+
+          <label for="bat">Bathroom</label>
+          <select  id="bathroom" class="form-control">
+          <option *ngFor="let method of bathroom" [value]="method.id">{{ method.name }}</option>
+          </select>
+
+</div>
+<br>
+<img [src]="imageUrl"  style="width: 250px;height: 200px">
+<input type="file" #image accept="image/*" (change)="handlefile($event.target.files)" name="file">
+<button class ="btn btn-primary"(click)="uploadpic($event)" name="filetoupload" >Upload Pic</button>
+<br><br><button class="btn btn-primary" [disabled]="!f.valid">Submit</button>
+</div>
+</div>
+
+</form>

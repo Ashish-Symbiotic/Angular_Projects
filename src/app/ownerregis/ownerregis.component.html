@@ -1,0 +1,51 @@
+<form #f="ngForm" (ngSubmit)="submit(f,$event)">
+<div id="asg">
+<div class="form-group">
+<h2> Register here</h2>
+
+<div class="radio">
+<label>
+<input  type="radio" name="select" value="T" id="wh5" (change)="radio($event)" >
+Tennant &nbsp; &nbsp;
+</label>
+<label>
+<input  type="radio" name="select" value="O" id="fl5" (change)="radio($event)" >
+Owner
+</label>
+</div>
+<label for="uname">Username</label>
+<input type="text" class="form-control" required ngModel name="uname" #uname="ngModel" (change)="log(uname)" id="uname" placeholder="Enter your Username Name"><br>
+<div class="alert alert-danger" *ngIf="uname.touched && !uname.valid" id="wer">Name is required</div>
+<label for="userName1">Name</label>
+<input type="text" class="form-control" required ngModel name="userName" #userName="ngModel" (change)="log(userName)" id="userName" placeholder="Enter your Name"><br>
+<div class="alert alert-danger" *ngIf="userName.touched && !userName.valid" id="war1">Name is required</div>
+<label for="email">Email</label>
+<input type="email" class="form-control" required ngModel name="email" #email="ngModel" (change)="log6(email)" id="email" placeholder="Enter your email"><br>
+<div class="alert alert-danger" *ngIf="email.touched && !email.valid" id="war1">Email is required</div>
+<label for="address">Address</label>
+<textarea required minlength="5" cols="10" rows="4" class="form-control" required ngModel name="address" #address="ngModel" (change)="log2(address)" id="address" placeholder="Enter your Address"></textarea><br>
+<div class="alert alert-danger" *ngIf="address.touched && !address.valid" id="war1">
+<div *ngIf="address.errors.required">Address is required</div>
+<div *ngIf="address.errors.minlength">Address should be minimum 5 charecters</div>
+</div>
+<label for="phone">Phone Number</label>
+<input type="text" required maxlength="10" (keypress)="keyPress($event)" minlength=10 class="form-control" required ngModel name="phoneno" #phoneno="ngModel" (change)="log3(phoneno)" id="phoneno" placeholder="Enter your Phone Number"><br>
+<div class="alert alert-danger" *ngIf="phoneno.touched && !phoneno.valid" id="war1">
+<div *ngIf="phoneno.errors.required">Phone Number is required</div>
+<div *ngIf="phoneno.errors.minlength">Phone should be of 10 charecters</div>
+</div>
+<label for="aadhar">Aadhar Number</label>
+<input type="text" required minlength="12" maxlength="12" class="form-control" (keypress)="keyPress1($event)" required ngModel name="aadhar" #aadhar="ngModel" (change)="log4(aadhar)" id="aadhar" placeholder="Enter your Aadhar Number"><br>
+<div class="alert alert-danger" *ngIf="aadhar.touched && !aadhar.valid" id="war1">
+<div *ngIf="aadhar.errors.required">Aadhar Number is required</div>
+<div *ngIf="aadhar.errors.minlength">Aadhar should be of 12 charecters</div>
+</div>
+<label for="city">City</label>
+<input type="text" class="form-control" required ngModel name="city" #city="ngModel" (change)="log5(city)" id="city" placeholder="Enter your City"><br>
+<div class="alert alert-danger" *ngIf="city.touched && !city.valid" id="war1">
+<div *ngIf="city.errors.required">Please enter your city</div>
+</div>
+<button class="btn btn-primary" [disabled]="!f.valid">Submit</button>
+</div>
+</div>
+</form>

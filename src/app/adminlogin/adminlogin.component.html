@@ -1,0 +1,20 @@
+<form #f="ngForm" (ngSubmit)="submit(f,$event)">
+<div id="asg">
+<div class="form-group">
+<h2> Login If already registered</h2>
+<label for="userName1">User Name</label>
+<input type="text" class="form-control"  required ngModel name="username" #username="ngModel" (change)="log(username)" id="username" placeholder="Enter your User Name"><br>
+<div class="alert alert-danger" *ngIf="username.touched && !username.valid" id="war1">User Name is required</div>
+</div>
+<div class="form-group">
+<label for="password1" id="lpassword">Password</label>
+<input id="pass" type="password" class="form-control" required ngModel name="pass" #pass="ngModel"  placeholder="Enter your Password"><br>
+<button class="btn btn-primary" [disabled]="!f.valid">Submit</button>
+<br>
+<br>
+<p>
+
+</p>
+</div>
+</div>
+</form>

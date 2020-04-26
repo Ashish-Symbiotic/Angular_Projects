@@ -1,0 +1,170 @@
+@import "https://bootswatch.com/4/materia/bootstrap.min.css";
+
+.page
+{
+	width:100%;
+
+}
+
+ .slider
+ {
+ width:20%;
+ height:100%;
+ float:left;
+ margin-top:0%;
+ margin-left:2%;
+ text-align: left;	
+ background-color:  #f2f2f2;
+ padding:5%;
+ box-shadow:0px 0px 5px 5px rgb(230,223,230,1);
+ }
+ 
+ .main
+ {
+ padding:1.5%;
+ width:90%;
+ height:100%;
+ margin-top: 0%;
+ margin-right:2%;
+ float: right;
+ background-color: #f2f2f2;
+ box-shadow:0px 0px 5px 5px rgb(230,223,230,1);
+ }
+.chip {
+    display: inline-block;
+    padding: 0 25px;
+    height: 200px;
+    width:700px;
+    font-size: 30px;
+    line-height: 50px;
+    border-radius: 25px;
+    background-color: #f1f1f1;
+}
+
+.chip img {
+    float: left;
+    margin: 0 10px 0 -25px;
+    height: 200px;
+    width:300px;
+    border-radius: 5%;
+}
+
+ .btn
+{
+background-color:#82c434;
+border-radius:0px;
+position: absolute;
+right:10%;
+bottom:-1%;
+border-color:#82c434;
+color:#8B0000;
+box-shadow:0px 0px 5px 5px rgb(230,223,230,1);
+}
+
+.col1
+{
+border-style:solid;
+border-color:black;
+border-width:5px;
+min-height:300px;
+box-shadow:0px 0px 5px 5px rgb(230,223,230,1);
+}
+
+
+.form-group {
+    margin:0;
+    padding:20px;
+
+    &:first-child { border-color: transparent; }
+}
+
+.form-control {
+  padding: 0px 10px 0 20px;
+  margin-top: 10px;
+  margin-bottom:20px;
+  color: #333;
+  font-size: 28px;
+  font-weight:10;
+  border: 2px solid #555;
+  -webkit-box-shadow: none;
+  box-shadow: 0px 0px 5px 5px rgb(230,223,230,1);
+  min-height:10px;
+  border-radius: 50px 0  0 50px !important;
+}
+.form-control :focus {
+        -webkit-box-shadow: none;
+        box-shadow: 0px 0px 5px 5px rgb(230,223,230,1);
+        border-color: transparent;
+
+    }
+
+#searchbtn
+{ border:0;
+  padding: 0px 10px;
+  margin-top: 8px;
+  margin-left:5px;
+  color: #fff;
+
+  background:#0000cc;
+  font-size: 20px;
+  font-weight: 500;
+  border: 2.5px solid #555;
+  border-left: none;
+  -webkit-box-shadow: none;
+  box-shadow: 0px 0px 5px 5px rgb(230,223,230,1);
+  height:45px;
+  border-radius:  0 50px 50px 0 !important;
+}
+
+#submit
+	{
+	float: right;
+	width:100px;
+	height:40px;
+	background-color: #000066;
+	color:white;
+	}
+#submit:hover
+	{
+	background:#e6e6ff;
+	color:black;
+	transition:0.5s
+	}
+
+
+#search-input{
+  width:80%;
+  border-color: red;
+  margin-left:10%;
+}
+#search-input input{
+  border-radius: 50px 0 0 20px;
+    border: 0;
+    box-shadow: none;
+    font-size: 1.1em;
+
+    padding-left: 20px;
+}
+#search-input input:focus { 
+    outline:none;
+    border-color:red;
+    box-shadow:0 0 20px #9ecaed;
+}
+#search-input button{
+    margin: 2px 0 0 0;
+    background: none;
+    box-shadow: none;
+    border: 0;
+    color: #666666;
+    padding: 0 8px 0 10px;
+    border-left: solid 1px #ccc;
+}
+#search-input button:hover{
+    border: 0;
+    box-shadow: none;
+    border-left: solid 1px #ccc;
+}
+#search-input .glyphicon-search{
+    font-size: 23px;
+}
+

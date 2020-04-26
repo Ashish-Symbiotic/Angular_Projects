@@ -1,0 +1,114 @@
+<form>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" routerLink="#"><FONT SIZE="10" FACE="CALIBRI">Rentistan</FONT></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#"><FONT SIZE="5" FACE="CALIBRI">&nbsp;&nbsp;Post</FONT><span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/rent"><FONT SIZE="5" FACE="CALIBRI">&nbsp;&nbsp;Rent</FONT></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href=""><FONT SIZE="5" FACE="CALIBRI">&nbsp;&nbsp;Enquiry</FONT></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><FONT SIZE="5" FACE="CALIBRI">&nbsp;&nbsp;About</FONT></a>
+      </li>
+
+      <li class="nav-item dropdown show"> 
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true"><FONT SIZE="5" FACE="CALIBRI">&nbsp;&nbsp;Login</FONT></a>
+    <div class="dropdown-menu hide" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 38px, 0px);">
+      <a class="dropdown-item" routerLink="/Login"><FONT SIZE="5" FACE="CALIBRI">Customer Login</FONT></a>
+      <a class="dropdown-item" href="#"><FONT SIZE="5" FACE="CALIBRI">Property Dealer Login</FONT></a>  
+    </div>
+  </li>
+
+  <li class="nav-item">
+        <a class="nav-link" href="/own"><FONT SIZE="5" FACE="CALIBRI">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New User</FONT></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<div id="search-input">
+            <div class="input-group">
+              <input type="text" list="search_result" class="form-control input-sm" maxlength="30" placeholder="Search" name="text" [(ngModel)]="text" (input)="search_value($event)" (keyup.enter)="search_text(text)"/>
+              
+                  
+                
+            </div>
+          </div>
+
+<datalist id ="search_result">
+<option *ngFor="let data of products"> {{data.locality}}</option>
+ </datalist>
+
+<div class="page">
+<!--<div class="slider">
+ <b>Type of Acoomodation</b>
+ 
+   <div class="radio">
+  <label>
+  <input  type="radio" name="acoomodation" [(ngModel)] = 'acoomodation' [value]="w" id="wh" ><b>
+  Whole House</b> &nbsp; &nbsp;
+  </label>
+  <label>
+  <input  type="radio" name="acoomodation" [(ngModel)] = 'acoomodation' [value]="f" id="fl"><b>
+  Floor</b>
+  </label>
+  </div>
+ 
+	
+  <div>
+  </div>
+ <br>
+
+ <b>Property Type</b>
+ <br>
+   <input  type="checkbox" name="pt" value="1" id="fl"><b>1BHK</b><br>
+   <input  type="checkbox" name="pt" value="2" id="fl"><b>2BHK</b><br>
+   <input  type="checkbox" name="pt" value="3" id="fl"><b>3BHK</b><br>
+   <input  type="checkbox" name="pt" value="4" id="fl"><b>4BHK</b><br>
+   <input  type="checkbox" name="pt" value="5" id="fl"><b>5BHK</b><br>
+   <input  type="checkbox" name="pt" value=">5" id="fl"><b>>5BHK</b><br>
+<br>
+<br>
+ <b> <input  type="checkbox" name="parking" value="3" id="pk">
+  Parking</b>
+<br>
+<br>
+<b>Floors</b>
+<input type="text" name="floor" placeholder="Floor Number">
+<br>
+
+<br>
+<br>
+<b>Price Range</b>
+<input type="text" name="price" placeholder="Price">
+<br>
+</div>--->
+
+
+	<div class= "main" *ngFor="let data of product1 ">
+			<div class="chip" >
+ 			 	<img src="../../assets/images/1.jpg" alt="Person" width="100" height="100">
+  				{{data.owner_name}}<br>
+          {{data.locality}}
+  			</div>		
+  			
+	<br>
+ 
+			<input type="button" id= "submit" value="Get Details" (click)='getD(data.Id)' name = "Get Details">
+			
+	</div>	
+</div>
+</form>
+
+

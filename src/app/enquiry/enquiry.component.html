@@ -1,0 +1,96 @@
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" routerLink="#"><FONT SIZE="10" FACE="CALIBRI" color="white">Rentistan</FONT></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/profile"><FONT SIZE="5" FACE="CALIBRI">&nbsp;&nbsp;&nbsp;Post</FONT><span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/rent"><FONT SIZE="5" FACE="CALIBRI">&nbsp;&nbsp;Rent</FONT></a>
+      </li>
+
+        <li class="nav-item">
+        <a class="nav-link" routerLink="/enquiry"><FONT SIZE="5" FACE="CALIBRI">&nbsp;&nbsp;Enquiry</FONT></a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#"><FONT SIZE="5" FACE="CALIBRI">&nbsp;&nbsp;About</FONT></a>
+      </li>
+
+      <li class="nav-item dropdown show">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true"><FONT SIZE="5" FACE="CALIBRI">&nbsp;&nbsp;Login</FONT></a>
+    <div class="dropdown-menu hide" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 38px, 0px);">
+      <a class="dropdown-item" routerLink="/Login"><FONT SIZE="5" FACE="CALIBRI">Customer Login</FONT></a>
+      <a class="dropdown-item" href="#"><FONT SIZE="5" FACE="CALIBRI">Property Dealer Login</FONT></a>  
+    </div>
+  </li>
+
+  <li class="nav-item">
+        <a class="nav-link" href="/own"><FONT SIZE="5" FACE="CALIBRI">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New User</FONT></a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+
+<form [formGroup]="enquiryform" #f="ngForm" (ngSubmit)="submit(f)">
+<div id="asg">
+<div class="form-group">
+<h2> Enquiry Form</h2>
+<label for="userName1">Name</label>
+<input type="text"
+class="form-control"
+formControlName="userName"
+ id="userName"
+ placeholder="Enter your Name"><br>
+<div *ngIf="userName.touched" class="alert alert-danger"  id="war1">
+  Name is required
+</div>
+<label for="email">Email</label>
+<input type="text"
+class="form-control"
+formControlName="email"
+ id="email"
+ placeholder="Enter your email"><br>
+<div *ngIf="email.touched" class="alert alert-danger"  id="war1">Email is required</div>
+</div>
+
+
+<label for="phone">Phone Number</label>
+<input type="text"
+formControlName="phoneno"
+class="form-control"
+id="phoneno"
+placeholder="Enter your Phone Number"><br>
+<div *ngIf="phoneno.touched && phoneno.invalid" class="alert alert-danger"  id="war1">
+<div *ngIf="phoneno.errors.required">Phone Number is required</div>
+<div *ngIf="phoneno.errors.minlength">Phone Number should be 10 characters</div>
+</div>
+
+<label for="city">City</label>
+<input type="text"
+formControlName="city"
+class="form-control"
+id="city" placeholder="Enter your City"><br>
+<div *ngIf="city.touched" class="alert alert-danger"  id="war1">City Name is required</div>
+<button class="btn btn-primary" [disabled]="!f.valid">Submit</button>
+</div>
+</form>
+
+
+<div class="footer">
+  <p>
+    Disclaimer: Rentistan is only an intermediary offering its platform to facilitate the transactions between Seller and Customer/Buyer/User and is not and cannot be a party to or control in any manner any transactions between the Seller and the Customer/Buyer/User. All the offers and discounts on this Website have been extended by various Builder(s)/Developer(s) who have advertised their products. Rentistan is only communicating the offers and not selling or rendering any of those products or services. It neither warrants nor is it making any representations with respect to offer(s) made on the site. Rentistan shall neither be responsible nor liable to mediate or resolve any disputes or disagreements between the Customer/Buyer/User and the Seller and both Seller and Customer/Buyer/User shall settle all such disputes without involving Rnetistan in any manner.
+  </p>
+  <hr>
+  <p>All trademarks, logos and names are properties of their respective owners. All Rights Reserved. © Copyright 2018 Rentistan</p>
+  <p>Contact information: <a href="mailto:someone@example.com">
+  support@gmail.com</a>.</p>
+
+</div>
+
