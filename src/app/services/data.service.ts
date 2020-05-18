@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
-import { map } from 'rxjs/operators';
-import { JsonPipe } from '@angular/common';
+import { filter, map } from 'rxjs/operators';
+
+import { Observable } from 'rxjs';
+import { Datac } from '../datac';
 
 @Injectable({
   providedIn: 'root'
@@ -12,8 +14,8 @@ export class DataService {
   constructor(public http : HttpClient) {
 
   }
-  geetPost(){
-   return  this.http.get('https://jsonplaceholder.typicode.com/posts');
+  geetPost():Observable<Datac[]>{
+   return  this.http.get('https://jsonplaceholder.typicode.com/posts').pipe(map(data =><Datac[]>data));
   }
 
 }

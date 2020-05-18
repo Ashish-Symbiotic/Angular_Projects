@@ -6,15 +6,17 @@
 <form onsubmit="return false">
   <input type="text" name ="name" id="name2">
   <input type ="text" name ="value" id ="name1">
-  <button onclick=callme(name2.value,name1.value)>Click Me</button>
+  <button onclick=callme()>Click Me</button>
 </form>
 </body>
 <script>
-  function callme( x ,  y)
+  function callme()
   {
-    x= parseInt(x);
-    y= parseInt(y);
-    console.log(x+y);
+   var  x= "000485";
+   var y = "004805";
+  var s ="";
+  s=y.replace(/^0+/, '');
+   console.log(s);
     return true;
   }
 </script>
